@@ -38,6 +38,18 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/images/keyboard/sBat_strip4.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/keyboard/x.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/keyboard/z.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/music/music-goes-here.txt");
 		types.push (lime.Assets.AssetType.TEXT);
 		
@@ -122,7 +134,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "1",
+			build: "40",
 			company: "HaxeFlixel",
 			file: "ComboboKnights",
 			fps: 60,

@@ -41,10 +41,5 @@ class PlayState extends FlxState
 	override public function update():Void
 	{
 		super.update();
-		
-		if (FlxG.keys.anyJustPressed(["Z", "X"]))
-		{
-			Reg.latestKeyStrokes.push(FlxG.keys.getKeyCode(FlxG.keys.firstJustPressed()) );
-		}
 	}	
 }
