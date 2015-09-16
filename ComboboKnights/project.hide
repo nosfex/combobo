@@ -1,7 +1,7 @@
 {
      "_hxcls" : "projectaccess.Project"
     ,"type" : 1
-    ,"target" : 0
+    ,"target" : 4
     ,"name" : "/ComboboKnights"
     ,"main" : null
     ,"projectPackage" : null
@@ -19,7 +19,7 @@
             ,"foldedRegions" : [
 
             ]
-            ,"activeLine" : 66
+            ,"activeLine" : 57
         }
         ,{
              "path" : "source/enemy/BaseEnemy.hx"
@@ -28,7 +28,7 @@
             ,"foldedRegions" : [
 
             ]
-            ,"activeLine" : 0
+            ,"activeLine" : 7
         }
         ,{
              "path" : "ComboboKnights.hxproj"
@@ -49,7 +49,7 @@
             ,"activeLine" : 42
         }
     ]
-    ,"activeFile" : "Project.xml"
+    ,"activeFile" : "source/enemy/BaseEnemy.hx"
     ,"openFLTarget" : "mac"
     ,"openFLBuildMode" : "Debug"
     ,"runActionType" : 2

@@ -1,0 +1,12 @@
+-lib openfl
+-lib flixel
+-lib flixel-ui
+-lib flixel-addons
+-lib flixel-tools
+-lib swf
+-lib lime
+-cp source
+-main Main
+
+-swf-version 11.2
+-swf ComboboKnights.swf

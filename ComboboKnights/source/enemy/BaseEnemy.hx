@@ -24,39 +24,36 @@ class BaseEnemy extends FlxSpriteGroup
 	override public function update() :Void
 	{
 		super.update();
-	
 		
 		if (FlxG.keys.justReleased.Z) 
 		{
-			FlxG.log.add("wtf: cOMBOrEQ: " + comboRequirement[0] + " KEYCODE: " + FlxKey.Z + " COMBO LENGTH: " + comboRequirement.length);
-			if (comboRequirement[0] == FlxKey.Z)
-			{
-				 comboRequirement.remove(comboRequirement[0]);
-				
-				remove(keys[0]);
-				keys.remove(keys[0]);
-				FlxG.log.add("KILLING BADDIE");
-			}
+			
+			checkHit(FlxKey.Z);
 		}
+		
 		
 		if (FlxG.keys.justReleased.X) 
 		{
-			FlxG.log.add("wtf: cOMBOrEQ: " + comboRequirement[0] + " KEYCODE: " + FlxKey.Z + " COMBO LENGTH: " + comboRequirement.length);
-			
-			if (comboRequirement[0] == FlxKey.X)
-			{
-				comboRequirement.remove(comboRequirement[0]);
-				
-				remove(keys[0]);
-				keys.remove(keys[0]);
-				FlxG.log.add("KILLING BADDIE");
-			}
-		}
+			checkHit(FlxKey.X);
 		
+		} 
 		health = comboRequirement.length;
 		if (health == 0)
 		{
 			kill();
+		}
+	}
+	
+	private function checkHit(key : Int): Void 
+	{
+				
+		if (comboRequirement[0] == key)
+		{
+			 comboRequirement.remove(comboRequirement[0]);
+
+			remove(keys[0]);
+			keys.remove(keys[0]);
+			FlxG.log.add("KILLING BADDIE");
 		}
 	}
 	
