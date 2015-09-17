@@ -1,4 +1,5 @@
 package;
+import enemy.EnemyFactory;
 
 import enemy.BaseEnemy;
 import flixel.FlxG;
@@ -22,8 +23,8 @@ class PlayState extends FlxState
 	{
 		super.create();
 		
-		var e : BaseEnemy = new BaseEnemy(FlxG.width * 1.2, FlxG.height / 2);
-		add(e);
+		var ef : EnemyFactory = new EnemyFactory();
+		add(ef);
 	}
 	
 	/**

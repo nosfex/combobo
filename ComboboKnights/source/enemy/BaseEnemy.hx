@@ -25,18 +25,7 @@ class BaseEnemy extends FlxSpriteGroup
 	{
 		super.update();
 		
-		if (FlxG.keys.justReleased.Z) 
-		{
-			
-			checkHit(FlxKey.Z);
-		}
 		
-		
-		if (FlxG.keys.justReleased.X) 
-		{
-			checkHit(FlxKey.X);
-		
-		} 
 		health = comboRequirement.length;
 		if (health == 0)
 		{
@@ -44,7 +33,7 @@ class BaseEnemy extends FlxSpriteGroup
 		}
 	}
 	
-	private function checkHit(key : Int): Void 
+	public function checkHit(key : Int): Void 
 	{
 				
 		if (comboRequirement[0] == key)
@@ -59,6 +48,7 @@ class BaseEnemy extends FlxSpriteGroup
 	
 	override public function kill() :Void
 	{
+		super.kill();
 		remove(baseView);
 	}
 	
@@ -85,6 +75,7 @@ class BaseEnemy extends FlxSpriteGroup
 		
 		velocity.x = -30;
 		baseView.velocity.x = -30;
+		alive = true;
 	}
 	
 	private function generateCombination() :Void

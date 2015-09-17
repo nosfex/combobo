@@ -9,6 +9,7 @@ import flixel.util.FlxSave;
  */
 class Reg
 {
+	public static var maxWave : Int = 10;
 	
 	public static var latestKeyStrokes : Array<Int> = new Array();
 	/**
