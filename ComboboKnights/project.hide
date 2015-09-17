@@ -28,16 +28,7 @@
             ,"foldedRegions" : [
 
             ]
-            ,"activeLine" : 7
-        }
-        ,{
-             "path" : "ComboboKnights.hxproj"
-            ,"useTabs" : true
-            ,"indentSize" : 4
-            ,"foldedRegions" : [
-
-            ]
-            ,"activeLine" : 0
+            ,"activeLine" : 74
         }
         ,{
              "path" : "source/PlayState.hx"
@@ -46,15 +37,33 @@
             ,"foldedRegions" : [
 
             ]
-            ,"activeLine" : 42
+            ,"activeLine" : 26
+        }
+        ,{
+             "path" : "source/enemy/EnemyFactory.hx"
+            ,"useTabs" : true
+            ,"indentSize" : 4
+            ,"foldedRegions" : [
+
+            ]
+            ,"activeLine" : 55
+        }
+        ,{
+             "path" : "source/Reg.hx"
+            ,"useTabs" : true
+            ,"indentSize" : 4
+            ,"foldedRegions" : [
+
+            ]
+            ,"activeLine" : 30
         }
     ]
     ,"activeFile" : "source/enemy/BaseEnemy.hx"
-    ,"openFLTarget" : "mac"
+    ,"openFLTarget" : "html5"
     ,"openFLBuildMode" : "Debug"
     ,"runActionType" : 2
-    ,"runActionText" : "haxelib run lime run \"%path%\" mac"
-    ,"buildActionCommand" : "haxelib run lime build \"%path%\" mac -debug"
+    ,"runActionText" : "haxelib run lime run \"%path%\" html5"
+    ,"buildActionCommand" : "haxelib run lime build \"%path%\" html5 -debug --connect 5000"
     ,"hiddenItems" : [
 
     ]
