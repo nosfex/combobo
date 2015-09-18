@@ -61,6 +61,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_arial_ttf);
 		
@@ -78,6 +80,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/keyboard/x.png", AssetType.IMAGE);
 		className.set ("assets/images/keyboard/z.png", __ASSET__assets_images_keyboard_z_png);
 		type.set ("assets/images/keyboard/z.png", AssetType.IMAGE);
+		className.set ("assets/images/player/x_laser.png", __ASSET__assets_images_player_x_laser_png);
+		type.set ("assets/images/player/x_laser.png", AssetType.IMAGE);
+		className.set ("assets/images/player/z_laser.png", __ASSET__assets_images_player_z_laser_png);
+		type.set ("assets/images/player/z_laser.png", AssetType.IMAGE);
 		className.set ("assets/music/music-goes-here.txt", __ASSET__assets_music_music_goes_here_txt);
 		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
 		className.set ("assets/sounds/sounds-go-here.txt", __ASSET__assets_sounds_sounds_go_here_txt);
@@ -112,6 +118,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/keyboard/z.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/player/x_laser.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/player/z_laser.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -171,6 +185,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/images/keyboard/z.png", __ASSET__assets_images_keyboard_z_png);
 		type.set ("assets/images/keyboard/z.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/player/x_laser.png", __ASSET__assets_images_player_x_laser_png);
+		type.set ("assets/images/player/x_laser.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/player/z_laser.png", __ASSET__assets_images_player_z_laser_png);
+		type.set ("assets/images/player/z_laser.png", AssetType.IMAGE);
 		
 		className.set ("assets/music/music-goes-here.txt", __ASSET__assets_music_music_goes_here_txt);
 		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
@@ -912,6 +932,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_images_keyboard_sbat_strip4_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_keyboard_x_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_keyboard_z_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_player_x_laser_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_player_z_laser_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_music_music_goes_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_beep_mp3 extends flash.media.Sound { }
@@ -921,6 +943,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 #elseif html5
+
+
 
 
 
@@ -947,12 +971,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("assets/images/keyboard/sBat_strip4.png") #if display private #end class __ASSET__assets_images_keyboard_sbat_strip4_png extends lime.graphics.Image {}
 @:image("assets/images/keyboard/x.png") #if display private #end class __ASSET__assets_images_keyboard_x_png extends lime.graphics.Image {}
 @:image("assets/images/keyboard/z.png") #if display private #end class __ASSET__assets_images_keyboard_z_png extends lime.graphics.Image {}
+@:image("assets/images/player/x_laser.png") #if display private #end class __ASSET__assets_images_player_x_laser_png extends lime.graphics.Image {}
+@:image("assets/images/player/z_laser.png") #if display private #end class __ASSET__assets_images_player_z_laser_png extends lime.graphics.Image {}
 @:file("assets/music/music-goes-here.txt") #if display private #end class __ASSET__assets_music_music_goes_here_txt extends lime.utils.ByteArray {}
 @:file("assets/sounds/sounds-go-here.txt") #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends lime.utils.ByteArray {}
-@:file("/usr/lib/haxe/lib/flixel/3,3,11/assets/sounds/beep.mp3") #if display private #end class __ASSET__assets_sounds_beep_mp3 extends lime.utils.ByteArray {}
-@:file("/usr/lib/haxe/lib/flixel/3,3,11/assets/sounds/flixel.mp3") #if display private #end class __ASSET__assets_sounds_flixel_mp3 extends lime.utils.ByteArray {}
-@:font("/usr/lib/haxe/lib/flixel/3,3,11/assets/fonts/nokiafc22.ttf") #if display private #end class __ASSET__assets_fonts_nokiafc22_ttf extends lime.text.Font {}
-@:font("/usr/lib/haxe/lib/flixel/3,3,11/assets/fonts/arial.ttf") #if display private #end class __ASSET__assets_fonts_arial_ttf extends lime.text.Font {}
+@:file("C:/HaxeToolkit/haxe/lime/flixel/3,3,11/assets/sounds/beep.mp3") #if display private #end class __ASSET__assets_sounds_beep_mp3 extends lime.utils.ByteArray {}
+@:file("C:/HaxeToolkit/haxe/lime/flixel/3,3,11/assets/sounds/flixel.mp3") #if display private #end class __ASSET__assets_sounds_flixel_mp3 extends lime.utils.ByteArray {}
+@:font("C:/HaxeToolkit/haxe/lime/flixel/3,3,11/assets/fonts/nokiafc22.ttf") #if display private #end class __ASSET__assets_fonts_nokiafc22_ttf extends lime.text.Font {}
+@:font("C:/HaxeToolkit/haxe/lime/flixel/3,3,11/assets/fonts/arial.ttf") #if display private #end class __ASSET__assets_fonts_arial_ttf extends lime.text.Font {}
 
 
 

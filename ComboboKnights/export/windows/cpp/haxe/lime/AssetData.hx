@@ -26,6 +26,10 @@ class AssetData {
 			type.set ("assets/images/keyboard/x.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/keyboard/z.png", "assets/images/keyboard/z.png");
 			type.set ("assets/images/keyboard/z.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/player/x_laser.png", "assets/images/player/x_laser.png");
+			type.set ("assets/images/player/x_laser.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/player/z_laser.png", "assets/images/player/z_laser.png");
+			type.set ("assets/images/player/z_laser.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/music/music-goes-here.txt", "assets/music/music-goes-here.txt");
 			type.set ("assets/music/music-goes-here.txt", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("assets/sounds/sounds-go-here.txt", "assets/sounds/sounds-go-here.txt");

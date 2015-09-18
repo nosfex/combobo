@@ -8,6 +8,8 @@ import flixel.FlxState;
 import flixel.text.FlxText;
 import flixel.ui.FlxButton;
 import flixel.util.FlxMath;
+import player.Player;
+import player.CheapLaser;
 
 /**
  * A FlxState which can be used for the actual gameplay.
@@ -22,7 +24,8 @@ class PlayState extends FlxState
 	override public function create():Void
 	{
 		super.create();
-		
+		var p :Player = new Player(0, FlxG.height * .5);
+		add(p);
 		var ef : EnemyFactory = new EnemyFactory();
 		add(ef);
 	}
@@ -42,5 +45,20 @@ class PlayState extends FlxState
 	override public function update():Void
 	{
 		super.update();
+		if (Reg.xLaserPos > 0)
+		{
+			FlxG.log.add("FIRE X LASER");
+			var laser :CheapLaser = new CheapLaser(0, FlxG.height *.5, Reg.xLaserPos, 0, AssetPaths.x_laser__png);
+			add(laser);
+			Reg.xLaserPos = 0;
+		}
+		
+		if (Reg.zLaserPos > 0)
+		{
+			FlxG.log.add("FIRE X LASER");
+			var laser :CheapLaser = new CheapLaser(0, FlxG.height *.5, Reg.zLaserPos, 0, AssetPaths.z_laser__png);
+			add(laser);
+			Reg.zLaserPos = 0;
+		}
 	}	
 }

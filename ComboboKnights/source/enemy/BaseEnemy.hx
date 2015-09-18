@@ -33,17 +33,18 @@ class BaseEnemy extends FlxSpriteGroup
 		}
 	}
 	
-	public function checkHit(key : Int): Void 
+	public function checkHit(key : Int): Bool 
 	{
 				
 		if (comboRequirement[0] == key)
 		{
-			 comboRequirement.remove(comboRequirement[0]);
-
+			comboRequirement.remove(comboRequirement[0]);
 			remove(keys[0]);
 			keys.remove(keys[0]);
 			FlxG.log.add("KILLING BADDIE");
+			return true;
 		}
+		return false;
 	}
 	
 	override public function kill() :Void
