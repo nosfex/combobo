@@ -38,6 +38,7 @@ class EnemyFactory extends FlxGroup
 		
 		if (enemies.length == 0)
 		{
+			Reg.level++;
 			initEnemies();
 		}
 		

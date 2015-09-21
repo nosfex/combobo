@@ -16,7 +16,8 @@ import player.CheapLaser;
  */
 class PlayState extends FlxState
 {
-	
+	var laserZ:CheapLaser;
+	var laserX:CheapLaser;
 	
 	/**
 	 * Function that is called up when to state is created to set it up. 
@@ -28,6 +29,14 @@ class PlayState extends FlxState
 		add(p);
 		var ef : EnemyFactory = new EnemyFactory();
 		add(ef);
+		
+		laserX = new CheapLaser(0, FlxG.height *.5, Reg.xLaserPos, 0, AssetPaths.x_laser__png);
+		add(laserX);
+		
+		laserZ = new CheapLaser(0, FlxG.height *.5, Reg.zLaserPos, 0, AssetPaths.z_laser__png);
+		add(laserZ);
+	
+		Reg.xLimit = FlxG.width * .5;
 	}
 	
 	/**
@@ -48,16 +57,17 @@ class PlayState extends FlxState
 		if (Reg.xLaserPos > 0)
 		{
 			FlxG.log.add("FIRE X LASER");
-			var laser :CheapLaser = new CheapLaser(0, FlxG.height *.5, Reg.xLaserPos, 0, AssetPaths.x_laser__png);
-			add(laser);
+			laserX.endX = Reg.xLaserPos;
+			laserX.alpha = 1;
 			Reg.xLaserPos = 0;
+			
 		}
 		
 		if (Reg.zLaserPos > 0)
 		{
-			FlxG.log.add("FIRE X LASER");
-			var laser :CheapLaser = new CheapLaser(0, FlxG.height *.5, Reg.zLaserPos, 0, AssetPaths.z_laser__png);
-			add(laser);
+			FlxG.log.add("FIRE Z LASER");
+			laserZ.endX = Reg.zLaserPos;
+			laserZ.alpha = 1;
 			Reg.zLaserPos = 0;
 		}
 	}	

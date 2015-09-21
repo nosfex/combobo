@@ -1,5 +1,5 @@
 package;
-
+import flixel.FlxG;
 import flixel.util.FlxPoint;
 import flixel.util.FlxSave;
 
@@ -15,6 +15,7 @@ class Reg
 	public static var zLaserPos :Float = 0;
 	public static var maxWave : Int = 10;
 	
+	public static var xLimit : Float;
 	public static var latestKeyStrokes : Array<Int> = new Array();
 	/**
 	 * Generic levels Array that can be used for cross-state stuff.

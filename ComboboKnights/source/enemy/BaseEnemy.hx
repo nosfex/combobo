@@ -25,7 +25,11 @@ class BaseEnemy extends FlxSpriteGroup
 	{
 		super.update();
 		
-		
+		if (x <= Reg.xLimit + _halfWidth)
+		{
+			x = Reg.xLimit + _halfWidth;
+			velocity.x = 0;
+		}
 		health = comboRequirement.length;
 		if (health == 0)
 		{
@@ -58,12 +62,21 @@ class BaseEnemy extends FlxSpriteGroup
 	{
 		generateCombination();
 			
+		var maxOffsetMul :Float = comboRequirement.length / 2 < 1.5 ? comboRequirement.length / 2 : 1.5;
+		var xOffset :Float = maxOffsetMul * 48;
+		var xcounter :Int = 0;
+		var ycounter :Int = 0;
 		for (i in 0 ... comboRequirement.length)
 		{
-			var key : FlxSprite = new FlxSprite(48 * i, 50, comboRequirement[i] == FlxKey.X ? AssetPaths.x__png : AssetPaths.z__png);
+			if (i % 3 == 0)
+			{
+				xcounter = 0;
+				ycounter++;
+			}
+			var key : FlxSprite = new FlxSprite(-xOffset + 48 * xcounter, 50 + 50 * ycounter, comboRequirement[i] == FlxKey.X ? AssetPaths.x__png : AssetPaths.z__png);
 			add(key);
-			key.velocity.x = -30;
 			keys.push(key);
+			xcounter++;
 		}
 		
 		baseView = new FlxSprite(0, 0, AssetPaths.sBat_strip4__png);
@@ -74,8 +87,7 @@ class BaseEnemy extends FlxSpriteGroup
 		baseView.scale.set(3, 3);
 		health = comboRequirement.length;
 		
-		velocity.x = -30;
-		baseView.velocity.x = -30;
+		velocity.x = -60;
 		alive = true;
 	}
 	
@@ -93,6 +105,7 @@ class BaseEnemy extends FlxSpriteGroup
 				comboRequirement.push(FlxKey.X);
 			}
 		}
+		
 	}
 	
 }

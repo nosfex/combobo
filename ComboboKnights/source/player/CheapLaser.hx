@@ -11,8 +11,8 @@ import flixel.FlxG;
  */
 class CheapLaser extends FlxSprite
 {
-	var endX :Float = 0;
-	var endY :Float = 0;
+	@:isVar public var endX(default, default) :Float = 0;
+	@:isVar public var endY(default, default) :Float = 0;
 	var invAlpha :Float = 0;
 	public function new(X:Float=0, Y:Float=0, EndX:Float=0, EndY:Float=0, ?SimpleGraphic:Dynamic) 
 	{
@@ -29,11 +29,6 @@ class CheapLaser extends FlxSprite
 		
 		scale.x = (endX);
 		alpha -= FlxG.elapsed ;
-		
-		if (alpha <= 0)
-		{
-			destroy();
-		}
 	}
 	
 	
